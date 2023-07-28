@@ -17,8 +17,10 @@
 </body>
 
 <script>
-function routes(){
+function routes(event){
+    event = event || window.event
 
+    event.preventDefault()
 }
 </script>
 </html>
