@@ -17,10 +17,29 @@
 </body>
 
 <script>
+const routes = {
+    '/':'./pages/home.html',
+    '/about':'./pages/about.html',
+    '/contact':'./pages/contact.html',
+    404 :'./pages/404.html',
+}
+
+
 function routes(event){
     event = event || window.event
 
     event.preventDefault()
+
+    window.history.pushState({},"", event.target.href)
+
+    handle()
+}
+
+function handle(){
+    // const pathName = window.location.pathname
+    const {pathName} = window.location 
+
+    console.log(pathName)
 }
 </script>
 </html>
